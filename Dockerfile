@@ -1,13 +1,12 @@
 FROM python:latest
 
-WORKDIR /usr/src/app
+LABEL maintainer="knut.schlesselmann@fortis-it.de oliver.kaak@acando.de"
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /usr/src/app
 
 COPY . .
 
-RUN ./setup.sh
+RUN ./setup.sh --no-venv
 
 
 CMD [ "python", "./run.py" ]

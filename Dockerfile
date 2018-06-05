@@ -8,4 +8,4 @@ COPY . .
 
 RUN ./setup.sh
 
-CMD [ "python", "./run.py" ]
+ENTRYPOINT ./run.py

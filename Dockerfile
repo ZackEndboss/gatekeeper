@@ -6,6 +6,6 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN ./setup.sh --no-venv
+RUN ./setup.sh
 
 CMD [ "python", "./run.py" ]
